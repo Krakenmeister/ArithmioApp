@@ -23,6 +23,7 @@
     "es6-promise-plugin": "^4.2.2"
   },
   "devDependencies": {
+    "@capacitor/assets": "^2.0.4",
     "@capacitor/cli": "latest",
     "vite": "^2.9.13"
   },

@@ -1,4 +1,4 @@
-import { CapacitorHttp } from '@capacitor/core';
+import { Capacitor } from '@capacitor/core';
 
 window.screen.orientation.lock('landscape');
 
@@ -39,7 +39,7 @@ let keyboardUp = false;
 
 import { Keyboard } from '@capacitor/keyboard';
 
-Keyboard.addListener("keyboardDidShow", (info) => {
+Keyboard.addListener((Capacitor.getPlatform() === 'ios' ? "keyboardWillShow" : "keyboardDidShow"), (info) => {
 	keyboardUp = true;
 
 	if (document.getElementById("wrapper")) {
@@ -73,7 +73,7 @@ Keyboard.addListener("keyboardDidShow", (info) => {
 	}
 });
 
-Keyboard.addListener("keyboardDidHide", (info) => {
+Keyboard.addListener((Capacitor.getPlatform() === 'ios' ? "keyboardWillHide" : "keyboardDidHide"), (info) => {
 	keyboardUp = false;
 
 	if (document.getElementById("wrapper")) {
@@ -559,6 +559,9 @@ function drawCard () {
 
 async function drawHand () {
 	for (let i=0; i<5; i++) {
+		if (document.getElementById('wrapper')) {
+			return;
+		}
 		drawCard();
 		await timer(500);
 	}
@@ -746,7 +749,14 @@ function startClassicGame () {
 	let menuButton = document.createElement('div');
 	menuButton.id = 'menuButton';
 	menuButton.addEventListener("click", () => {
-		window.location.href = window.location.href.replace('play', '');
+		removeAllChildNodes(document.getElementsByTagName('body')[0]);
+
+		let homePage = document.createElement('div');
+		homePage.id = 'wrapper';
+		homePage.className = 'homepage';
+
+		document.getElementsByTagName('body')[0].appendChild(homePage);
+		home();
 	});
 	menuButton.innerHTML = `
 		<span>Q</span>
@@ -796,7 +806,14 @@ function startEndlessGame () {
 	let menuButton = document.createElement('div');
 	menuButton.id = 'menuButton';
 	menuButton.onclick = () => {
-		window.location.href = window.location.href.replace('play', '');
+		removeAllChildNodes(document.getElementsByTagName('body')[0]);
+
+		let homePage = document.createElement('div');
+		homePage.id = 'wrapper';
+		homePage.className = 'homepage';
+
+		document.getElementsByTagName('body')[0].appendChild(homePage);
+		home();
 	};
 	menuButton.innerHTML = `
 		<span>Q</span>
@@ -859,7 +876,14 @@ function startHardcoreGame () {
 	let menuButton = document.createElement('div');
 	menuButton.id = 'menuButton';
 	menuButton.onclick = () => {
-		window.location.href = window.location.href.replace('play', '');
+		removeAllChildNodes(document.getElementsByTagName('body')[0]);
+
+		let homePage = document.createElement('div');
+		homePage.id = 'wrapper';
+		homePage.className = 'homepage';
+
+		document.getElementsByTagName('body')[0].appendChild(homePage);
+		home();
 	};
 	menuButton.innerHTML = `
 		<span>Q</span>
@@ -933,7 +957,14 @@ function endGame (message) {
 		<span>u</span>
 	`;
 	option1.onclick = () => {
-		window.location.href = window.location.href.replace('play', '');
+		removeAllChildNodes(document.getElementsByTagName('body')[0]);
+
+		let homePage = document.createElement('div');
+		homePage.id = 'wrapper';
+		homePage.className = 'homepage';
+
+		document.getElementsByTagName('body')[0].appendChild(homePage);
+		home();
 	};
 
 	let option2 = document.createElement('div');
@@ -1323,7 +1354,6 @@ function joinGame () {
 		} else if (data.access === 'granted') {
 			appRoomCode = code;
 			appPlayerId = data.playerID;
-				console.log("hi mom");
 				clientHand = [];
 				cardIDCounter = 0;
 				isMyTurn = false;

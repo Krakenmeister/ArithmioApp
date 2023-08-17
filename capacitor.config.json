@@ -9,9 +9,6 @@
     },
     "CapacitorHttp": {
       "enabled": true
-    },
-    "Keyboard": {
-      "resize": "none"
     }
   }
 }
