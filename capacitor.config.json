@@ -1,0 +1,17 @@
+{
+  "appId": "com.arithmio.krakenmeister",
+  "appName": "arithmio_app",
+  "bundledWebRuntime": false,
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    },
+    "CapacitorHttp": {
+      "enabled": true
+    },
+    "Keyboard": {
+      "resize": "none"
+    }
+  }
+}

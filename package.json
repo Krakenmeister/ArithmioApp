@@ -1,0 +1,31 @@
+{
+  "name": "capacitor-app",
+  "version": "1.0.0",
+  "description": "An Amazing Capacitor App",
+  "main": "index.js",
+  "keywords": [
+    "capacitor",
+    "mobile"
+  ],
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@capacitor/android": "^5.2.3",
+    "@capacitor/camera": "latest",
+    "@capacitor/core": "latest",
+    "@capacitor/ios": "^5.2.3",
+    "@capacitor/keyboard": "^5.0.6",
+    "@capacitor/splash-screen": "latest",
+    "cordova-plugin-screen-orientation": "^3.0.3",
+    "es6-promise-plugin": "^4.2.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "latest",
+    "vite": "^2.9.13"
+  },
+  "author": "",
+  "license": "ISC"
+}
