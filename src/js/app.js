@@ -1261,9 +1261,17 @@ function join () {
 function createGame () {
 	const maxPlayers = document.getElementById('maxPlayers').value;
 	const winPoints = document.getElementById('winPoints').value;
-	const gameSpeed = document.getElementById('gameSpeed').value
-	console.log(document.getElementById('maxPlayers').value);
+	const gameSpeed = document.getElementById('gameSpeed').value;
 
+	if (maxPlayers != parseInt(maxPlayers)) {
+		alert('Please enter a valid number of players.');
+		return;
+	}
+
+	if (winPoints != parseInt(winPoints)) {
+		alert('Please enter a valid score.');
+		return;
+	}
 	
 	fetch(`${hostname}${route}/start`, {
 		headers: {'Content-Type': 'application/json'},
@@ -1488,6 +1496,7 @@ function renderGame (gameState) {
 
 		let totalWrapper = document.createElement('div');
 		totalWrapper.id = 'totalWrapper';
+		totalWrapper.style.width = "90vw";
 
 		let totalDisplay = document.createElement('div');
 		totalDisplay.id = 'totalDisplay';
@@ -1495,9 +1504,11 @@ function renderGame (gameState) {
 
 		let decreaseTotal = document.createElement('div');
 		decreaseTotal.id = 'decreaseTotal';
+		decreaseTotal.style.width = "12vw";
 
 		let increaseTotal = document.createElement('div');
 		increaseTotal.id = 'increaseTotal';
+		increaseTotal.style.width = "12vw";
 
 		if (!isMyTurn) {
 			decreaseTotal.style.visibility = 'hidden';

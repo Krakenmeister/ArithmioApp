@@ -1,6 +1,6 @@
 {
   "appId": "com.arithmio.krakenmeister",
-  "appName": "arithmio_app",
+  "appName": "Arithmio",
   "bundledWebRuntime": false,
   "webDir": "dist",
   "plugins": {
