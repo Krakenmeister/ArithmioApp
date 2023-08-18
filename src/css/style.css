@@ -2,6 +2,9 @@ html, body {
 	overflow-x: hidden;
 	overflow-y: hidden;
 	cursor: default;
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
 }
 
 #wrapper.homepage {
@@ -94,6 +97,9 @@ html, body {
 #codeTitle {
 	font-size: 7vw;
 	cursor: text;
+	-webkit-user-select: text; /* Safari */
+	-ms-user-select: text; /* IE 10 and IE 11 */
+	user-select: text; /* Standard syntax */
 }
 
 #lobbyDisplay {

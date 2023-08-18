@@ -4,4 +4,5 @@
     <string name="title_activity_main">Arithmio</string>
     <string name="package_name">com.arithmio.krakenmeister</string>
     <string name="custom_url_scheme">com.arithmio.krakenmeister</string>
+    <string name="admob_app_id">ca-app-pub-9790404589582022~7507930364</string>
 </resources>

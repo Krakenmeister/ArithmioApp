@@ -1,4 +1,34 @@
 import { Capacitor } from '@capacitor/core';
+import { AdMob, InterstitialAdPluginEvents } from '@capacitor-community/admob';
+
+AdMob.initialize({
+	requestTrackingAuthorization: true,
+	initializeForTesting: true,
+	testingDevices: ['00008030-001C496A3E03402E'],
+});
+
+async function interstitial() {
+
+    AdMob.addListener(InterstitialAdPluginEvents.Loaded, (info) => {
+        console.log("Ad loaded!");
+    });
+
+	const options = {};
+
+	if (Capacitor.getPlatform() === 'ios') {
+		options = {
+			// adId: 'ca-app-pub-9790404589582022/6829844339'
+			adId: 'ca-app-pub-3940256099942544/4411468910'
+		};
+	} else if (Capacitor.getPlatform() === 'android') {
+		options = {
+			adId: 'ca-app-pub-9790404589582022/1708561351'
+		};
+	}
+
+    await AdMob.prepareInterstitial(options);
+    await AdMob.showInterstitial();
+}
 
 window.screen.orientation.lock('landscape');
 
@@ -756,6 +786,7 @@ function startClassicGame () {
 		homePage.className = 'homepage';
 
 		document.getElementsByTagName('body')[0].appendChild(homePage);
+		interstitial();
 		home();
 	});
 	menuButton.innerHTML = `
@@ -813,6 +844,7 @@ function startEndlessGame () {
 		homePage.className = 'homepage';
 
 		document.getElementsByTagName('body')[0].appendChild(homePage);
+		interstitial();
 		home();
 	};
 	menuButton.innerHTML = `
@@ -883,6 +915,7 @@ function startHardcoreGame () {
 		homePage.className = 'homepage';
 
 		document.getElementsByTagName('body')[0].appendChild(homePage);
+		interstitial();
 		home();
 	};
 	menuButton.innerHTML = `
@@ -964,6 +997,7 @@ function endGame (message) {
 		homePage.className = 'homepage';
 
 		document.getElementsByTagName('body')[0].appendChild(homePage);
+		interstitial();
 		home();
 	};
 
@@ -980,6 +1014,7 @@ function endGame (message) {
 		<span>e</span>
 	`;
 	option2.addEventListener("click", () => {
+		interstitial();
 		startGame();
 	});
 
@@ -1805,6 +1840,7 @@ function renderGame (gameState) {
 				homePage.className = 'homepage';
 
 				document.getElementsByTagName('body')[0].appendChild(homePage);
+				interstitial();
 				home();
 			};
 			leaveBtn.style.width = '10%';
@@ -1849,4 +1885,5 @@ function renderGame (gameState) {
 	}
 }
 
+interstitial();
 home();
