@@ -601,7 +601,7 @@ var RewardAdPluginEvents;
   RewardAdPluginEvents2["Rewarded"] = "onRewardedVideoAdReward";
 })(RewardAdPluginEvents || (RewardAdPluginEvents = {}));
 const AdMob = registerPlugin("AdMob", {
-  web: () => __vitePreload(() => import("./web.427c8c68.js"), true ? [] : void 0).then((m) => new m.AdMobWeb())
+  web: () => __vitePreload(() => import("./web.e2e5dec5.js"), true ? [] : void 0).then((m) => new m.AdMobWeb())
 });
 var KeyboardStyle;
 (function(KeyboardStyle2) {
@@ -618,15 +618,13 @@ var KeyboardResize;
 })(KeyboardResize || (KeyboardResize = {}));
 const Keyboard = registerPlugin("Keyboard");
 AdMob.initialize({
-  requestTrackingAuthorization: true,
-  initializeForTesting: true,
-  testingDevices: ["00008030-001C496A3E03402E"]
+  requestTrackingAuthorization: true
 });
 async function interstitial() {
   let options = {};
   if (Capacitor.getPlatform() === "ios") {
     options = {
-      adId: "ca-app-pub-3940256099942544/4411468910"
+      adId: "ca-app-pub-9790404589582022/6829844339"
     };
   } else if (Capacitor.getPlatform() === "android") {
     options = {

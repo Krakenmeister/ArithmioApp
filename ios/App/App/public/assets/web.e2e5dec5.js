@@ -1,4 +1,4 @@
-import { W as WebPlugin } from "./index.413d5ab0.js";
+import { W as WebPlugin } from "./index.6fc4a900.js";
 class AdMobWeb extends WebPlugin {
   constructor() {
     super({

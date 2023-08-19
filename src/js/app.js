@@ -3,8 +3,9 @@ import { AdMob, InterstitialAdPluginEvents } from '@capacitor-community/admob';
 
 AdMob.initialize({
 	requestTrackingAuthorization: true,
-	initializeForTesting: true,
-	testingDevices: ['00008030-001C496A3E03402E'],
+	// initializeForTesting: true,
+	// testingDevices: ['00008030-001C496A3E03402E'],
+	// testingDevices: ['c73f9fa8970cc33e09ba6938fd364897'],
 });
 
 // AdMob.addListener(InterstitialAdPluginEvents.Loaded, (info) => {
@@ -16,8 +17,8 @@ async function interstitial() {
 
 	if (Capacitor.getPlatform() === 'ios') {
 		options = {
-			// adId: 'ca-app-pub-9790404589582022/6829844339'
-			adId: 'ca-app-pub-3940256099942544/4411468910'
+			adId: 'ca-app-pub-9790404589582022/6829844339'
+			// adId: 'ca-app-pub-3940256099942544/4411468910'
 		};
 	} else if (Capacitor.getPlatform() === 'android') {
 		options = {
