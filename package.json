@@ -19,9 +19,7 @@
     "@capacitor/core": "latest",
     "@capacitor/ios": "^5.2.3",
     "@capacitor/keyboard": "^5.0.6",
-    "@capacitor/splash-screen": "latest",
-    "cordova-plugin-screen-orientation": "^3.0.3",
-    "es6-promise-plugin": "^4.2.2"
+    "@capacitor/splash-screen": "latest"
   },
   "devDependencies": {
     "@capacitor/assets": "^2.0.4",

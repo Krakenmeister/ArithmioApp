@@ -29,7 +29,7 @@ async function interstitial() {
     await AdMob.showInterstitial();
 }
 
-window.screen.orientation.lock('landscape');
+// window.screen.orientation.lock('landscape');
 
 const hostname = "https://krakenmeister.com";
 const route = "/arithmio";
