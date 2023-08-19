@@ -91,7 +91,6 @@
 				0DD462ECF0ED81721558C1FE /* Pods-Arithmio.debug.xcconfig */,
 				8FD94D01520A23F3F4ED2194 /* Pods-Arithmio.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -185,6 +184,7 @@
 		};
 		C8F8AA6FFB5C02C67EDAD61A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
