@@ -1104,7 +1104,7 @@ function goToPage (tutorialPage) {
 		page.innerHTML = `
 			<div id="page6Text">
 				<div class="tutorialText">
-					During multiplayer, players take turns playing as many cards as they can before drawing new ones. Note though that you cannot play the same card twice in a row during your turn (i.e. you can play 3 -> 6 -> 3, but not 6 -> 3 -> 3). If you end your turn without playing any cards, you will draw a 1. Players compete to teach the point goal first, but can also prematurely end the game by driving the Aggregate to 0. However, the player to do so will receive a 50 point penalty before final scores are calculated.
+					During multiplayer, players take turns playing as many cards as they can before drawing new ones. Note though that you cannot play the same card twice in a row during your turn (i.e. you can play 3 -> 6 -> 3, but not 6 -> 3 -> 3). If you end your turn without playing any cards, you will draw a 1. Players compete to reach the point goal first, but can also prematurely end the game by driving the Aggregate to 0. However, the player to do so will receive a 50 point penalty before final scores are calculated.
 				</div>
 			</div>
 		`;
