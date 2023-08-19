@@ -7,13 +7,12 @@ AdMob.initialize({
 	testingDevices: ['00008030-001C496A3E03402E'],
 });
 
+// AdMob.addListener(InterstitialAdPluginEvents.Loaded, (info) => {
+// 	console.log("Ad loaded!");
+// });
+
 async function interstitial() {
-
-    AdMob.addListener(InterstitialAdPluginEvents.Loaded, (info) => {
-        console.log("Ad loaded!");
-    });
-
-	const options = {};
+	let options = {};
 
 	if (Capacitor.getPlatform() === 'ios') {
 		options = {
