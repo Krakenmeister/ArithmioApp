@@ -26,8 +26,6 @@
 	<true/>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSUserTrackingUsageDescription</key>
-	<string>In order to enable personalized ads, enable app tracking.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Allow app to access Photos?</string>
 	<key>SKAdNetworkItems</key>

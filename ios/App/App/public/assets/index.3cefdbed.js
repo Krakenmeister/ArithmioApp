@@ -601,7 +601,7 @@ var RewardAdPluginEvents;
   RewardAdPluginEvents2["Rewarded"] = "onRewardedVideoAdReward";
 })(RewardAdPluginEvents || (RewardAdPluginEvents = {}));
 const AdMob = registerPlugin("AdMob", {
-  web: () => __vitePreload(() => import("./web.e2e5dec5.js"), true ? [] : void 0).then((m) => new m.AdMobWeb())
+  web: () => __vitePreload(() => import("./web.5b64ff84.js"), true ? [] : void 0).then((m) => new m.AdMobWeb())
 });
 var KeyboardStyle;
 (function(KeyboardStyle2) {
@@ -618,7 +618,7 @@ var KeyboardResize;
 })(KeyboardResize || (KeyboardResize = {}));
 const Keyboard = registerPlugin("Keyboard");
 AdMob.initialize({
-  requestTrackingAuthorization: true
+  requestTrackingAuthorization: false
 });
 async function interstitial() {
   let options = {};

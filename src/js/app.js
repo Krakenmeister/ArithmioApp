@@ -2,7 +2,7 @@ import { Capacitor } from '@capacitor/core';
 import { AdMob, InterstitialAdPluginEvents } from '@capacitor-community/admob';
 
 AdMob.initialize({
-	requestTrackingAuthorization: true,
+	requestTrackingAuthorization: false,
 	// initializeForTesting: true,
 	// testingDevices: ['00008030-001C496A3E03402E'],
 	// testingDevices: ['c73f9fa8970cc33e09ba6938fd364897'],
