@@ -1,0 +1,6 @@
+framework module Pods_Arithmio {
+  umbrella header "Pods-Arithmio-umbrella.h"
+
+  export *
+  module * { export * }
+}
